@@ -13,6 +13,12 @@ The ACWE method was proposed by Chan and Vese and is derived from the piecewise 
 The coding is done in MATLAB. The segmentation is shown below: 
 </div>
 
+<br/>
 <p align="center">
-<video src="videos/2phase_levelset.wmv" width="400" controls preload></video>
+<video width="320" height="240" controls preload>
+  <source src="2phase_levelset.mp4">
+</video>
 </p>
+
+
+
