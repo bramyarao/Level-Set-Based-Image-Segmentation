@@ -11,7 +11,7 @@ The ACWE method was proposed by Chan and Vese and is derived from the piecewise 
 The coding is done in MATLAB.
 <br/>
 <br/>
- The segmentation video for a black and white image is shown below which has only 2 colors - black and white. Hence is called a "2 Phase" segmentation. This is the basic example which demonstrate the method.
+ The segmentation video for a black and white image is shown below which has only 2 colors - black and white. Hence is called a "2 Phase" segmentation. This is the basic example which demonstrates the method.
 </div>
 
 <br/>
@@ -28,7 +28,7 @@ Additional examples: The method can also be extended to multi-phase, multi-chann
 <br/>
 ### Example 1: 
 <div style="text-align: justify"> 
-Multi-phase segmentation: Here 3 level set contours are used which can segment up to 8 regions (or phases) in the image. Below is a black and white image consisting of 5 regions (includes different shades of grey). The video shows the evolution of the level set contours to segment the image.
+Multi-phase segmentation: Here 3 level set contours are used which can segment up to 8 regions (or phases) in the image. Below is a black and white image consisting of 5 regions (where region colors include different shades of grey). The video shows the evolution of the level set contours to segment the image.
 </div>
 <br/>
 <p align="center">
@@ -40,7 +40,7 @@ Multi-phase segmentation: Here 3 level set contours are used which can segment u
 
 ### Example 2: 
 <div style="text-align: justify"> 
-Multi-phase, multi-channel segmentation: This is for images which have multiple channels like a RGB image which has 3 channels namely: red, green and blue. In this example, a RGB image, which has 3 colors is segmented using 2 level set contours (which can segment up to 4 regions).
+Multi-phase, multi-channel segmentation: This is for images which have multiple channels like a RGB images which have 3 channels namely: red, green and blue. In this example, a RGB image, which has 3 colors is segmented using 2 level set contours (which can segment up to 4 regions). The video shows the evolution of the level set contours for segmenting the image.
 </div>
 <br/>
 <p align="center">
