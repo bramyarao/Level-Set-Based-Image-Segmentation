@@ -8,7 +8,7 @@ In this work, image segmentation is carried out using the Active contours withou
 The coding is done in MATLAB.
 <br/>
 <br/>
- The segmentation video for a black and white image is shown below which has only 2 colors - black and white. Hence is called a "2 Phase" segmentation. This is the basic example which demonstrates the method.
+ The segmentation video for a grayscale image is shown below which has only 2 intensities - black and gray. Hence is called a "2 Phase" segmentation. This is the basic example which demonstrates the method.
 </div>
 
 <br/>
@@ -25,7 +25,7 @@ Additional examples: The method can also be extended to multi-phase, multi-chann
 <br/>
 ### Example 1: 
 <div style="text-align: justify"> 
-Multi-phase segmentation: Here 3 level set contours are used which can segment up to 8 regions (or phases) in the image. Below is a black and white image consisting of 5 regions (where region colors include different shades of grey). The video shows the evolution of the level set contours to segment the image.
+Multi-phase segmentation: Here 3 level set contours are used which can segment up to 8 regions (or phases) in the image. Below is a grayscale image consisting of 5 regions (where region intensities include different shades of grey). The video shows the evolution of the level set contours to segment the image.
 </div>
 <br/>
 <p align="center">
