@@ -23,9 +23,8 @@ The coding is done in MATLAB.
 
 <br/>
 <div style="text-align: justify"> 
-The method can also be extended to multi-phase, multi-channel segmentation. Examples are provided below. (Code, formulation not provided).
+Additional examples: The method can also be extended to multi-phase, multi-channel segmentation. Examples are provided below. (Code, formulation not provided).
 </div>
-<br/>
 
 ### Example 1: 
 <div style="text-align: justify"> 
