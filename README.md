@@ -4,7 +4,6 @@
 <div style="text-align: justify"> 
 In this work, image segmentation is carried out using the Active contours without edges (ACWE) framework. The final Euler-Lagrange equations obtained after minimizing the functional are solved numerically using semi-implicit scheme.
 </div> 
-<br/>
 
 ###  Active contours without edges (ACWE)
 <div style="text-align: justify"> 
@@ -17,7 +16,7 @@ The coding is done in MATLAB.
 
 <br/>
 <p align="center">
-<video width="320" height="240" controls preload>
+<video width="640" height="480" controls preload>
   <source src="videos/2phase_levelset.mp4">
 </video>
 </p>
@@ -27,29 +26,26 @@ The coding is done in MATLAB.
 The method can also be extended to multi-phase, multi-channel segmentation. Examples are provided below. (Code, formulation not provided).
 </div>
 <br/>
-<br/>
 
 ### Example 1: 
-<br/>
 <div style="text-align: justify"> 
 Multi-phase segmentation: Here 3 level set contours are used which can segment upto 8 regions in the image. below is a black and white image consisting of 5 regions. The video shows the evolution of the level set contours to segment the image.
 </div>
 <br/>
 <p align="center">
-<video width="320" height="240" controls preload>
+<video width="640" controls preload>
   <source src="videos/multiphase.mp4">
 </video>
 </p>
 <br/>
 
 ### Example 2: 
-<br/>
 <div style="text-align: justify"> 
 Multi-phase, multi-channel segmentation: This is for images which have multiple channels like a RGB image which has 3 channels namely: red, green and blue. 
 </div>
 <br/>
 <p align="center">
-<video width="320" height="240" controls preload>
+<video width="640" controls preload>
   <source src="videos/RGB.mp4">
 </video>
 </p>
