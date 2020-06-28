@@ -4,7 +4,7 @@
 <div style="text-align: justify"> 
 In this work, image segmentation is carried out using the Active contours without edges (ACWE) framework. The final Euler-Lagrange equations obtained after minimizing the functional are solved numerically using semi-implicit scheme.
 </div> 
-
+<br/>
 ###  Active contours without edges (ACWE)
 <div style="text-align: justify"> 
 The ACWE method was proposed by Chan and Vese and is derived from the piecewise constant Mumford-Shah functional in a level set framework for image segmentation. The review of the level set function, ACWE segmentation method, numerical solution and results are given in <a href="Latex/ACWE.pdf" target="blank">this pdf</a>. 
@@ -25,7 +25,7 @@ The coding is done in MATLAB.
 <div style="text-align: justify"> 
 Additional examples: The method can also be extended to multi-phase, multi-channel segmentation (Reference provided in the pdf). Examples are provided below. (Code, formulation not provided).
 </div>
-
+<br/>
 ### Example 1: 
 <div style="text-align: justify"> 
 Multi-phase segmentation: Here 3 level set contours are used which can segment up to 8 regions (or phases) in the image. Below is a black and white image consisting of 5 regions (includes different shades of grey). The video shows the evolution of the level set contours to segment the image.
