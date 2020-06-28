@@ -298,13 +298,69 @@ The multiphase level set method \cite{vese2002multiphase} is an extension to the
 The ACWE model has been extended to the segmentation of multichannel images in
 \cite{chan2000active}. A multi-channeled image can be split into multiple channels, which have to be input together for segmentation. Each pixel has a vector as input in a multichannel image. For example a RGB image consists of 3 channels for red, green, blue respectively. Each channel will be a grayscale image. Similarly a CMYK image can be split into 4 channels for cyan, magenta, yellow and black, respectively.
 
+\subsection{Multiphase multichannel segmentation}
+
+The multiphase segmentation can be applied to multichannel images by combining the multiphase and multichannel segmentation methods. A general framework of the functional for an image with $N$ channels, using $n$ level set curves is given by:
+%
+%
+\begin{align}
+\Pi (c_p \text{'s}, \phi_k \text{'s}) &= \sum_{k=1}^n \mu_k
+\int_{\Omega} \delta (\phi_k) \vert \triangledown \phi_k \vert d\bm{x} \notag \\
+&+ \sum_{p=1}^{2^n} \left(   \int_{\Omega_p} \frac{1}{N}
+\sum_{i=1}^N \left(\lambda_p^i
+(u_o^i(\bm{x}) - c_p^i)^2 \right) d\bm{x}  \right)
+\label{eqn3.29}
+\end{align}
+%
+%
+where $u_o^i(\bm{x})$ denotes the pixel intensity in the 
+$i^{\text{th}}$ channel at point $\bm{x}$ and $c_p^i$
+denotes the unknown constant which represents the mean value of intensity in the region $\Omega_p$ of channel
+$i$. The corresponding Euler Lagrange equations and expressions for $c_p^i$ can be obtained by minimizing the above functional \eqref{eqn3.29}.
+
 %===========================================
 % appendices
 %===========================================
 \begin{appendices}
-\section{}
+\section{Finite difference scheme for ACWE method}
 \label{Appendix-A}
+Equation \eqref{eqn3.15} for the ACWE method,  is solved numerically using a semi-implicit scheme as given below:
 
+\begin{align}
+\frac{\phi_{i,j}^{n+1} - \phi_{i,j}^{n} }{\triangle t} &= 
+\delta_\varepsilon (\phi_{i,j}^{n}) \frac{\mu}{h^2} 
+\left[ \left( \frac{\phi_{i+1,j}^{n} - \phi_{i,j}^{n+1}}
+{\mathbb{A}} \right) 
+- \left( \frac{\phi_{i,j}^{n+1} - \phi_{i-1,j}^{n}}
+{\mathbb{B} } \right) \right]  \notag \\
+&+
+\delta_\varepsilon (\phi_{i,j}^{n}) \frac{\mu}{h^2} 
+\left[ \left( \frac{\phi_{i,j+1}^{n} - \phi_{i,j}^{n+1}}
+{\mathbb{C}}  \right)
+- \left( \frac{\phi_{i,j}^{n+1} - \phi_{i,j-1}^{n}}
+{\mathbb{D} } \right) \right] \notag \\
+&+
+\delta_\varepsilon (\phi_{i,j}^{n})
+\left[ -\nu -\lambda_1 (u_{o,i,j} - c_1(\phi_n))^2 +  \lambda_2 (u_{o,i,j} - c_2(\phi_n))^2 \right]
+\end{align}
+where
+%
+%
+\begin{subequations}
+\begin{align}
+\mathbb{A} &= \sqrt{ \left(  \frac{\phi_{i+1,j}^{n} - \phi_{i,j}^{n}}{h} \right)^2 
+       + \left( \frac{\phi_{i,j+1}^{n} - \phi_{i,j-1}^{n}}{2h}  \right)^2 } \\
+\mathbb{B} &= \sqrt{ \left(  \frac{\phi_{i,j}^{n} - \phi_{i-1,j}^{n}}{h} \right)^2 
+       + \left( \frac{\phi_{i-1,j+1}^{n} - \phi_{i-1,j-1}^{n}}{2h}  \right)^2 } \\
+\mathbb{C} &= \sqrt{ \left(  \frac{\phi_{i+1,j}^{n} - \phi_{i-1,j}^{n}}{2h} \right)^2 
+       + \left( \frac{\phi_{i,j+1}^{n} - \phi_{i,j}^{n}}{h}  \right)^2 } \\
+\mathbb{D} &= \sqrt{ \left(  \frac{\phi_{i+1,j-1}^{n} - \phi_{i-1,j-1}^{n}}{2h} \right)^2 
+       + \left( \frac{\phi_{i,j}^{n} - \phi_{i,j-1}^{n}}{h}  \right)^2 }
+\end{align}
+\end{subequations}
+%
+$h$ is the spacing between the pixels in the image, which is the same in both $x$ and $y$ directions and 
+$\triangle t$ is the time step increment.
 
 \end{appendices}
 
