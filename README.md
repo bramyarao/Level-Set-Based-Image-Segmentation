@@ -37,7 +37,7 @@ Multi-phase segmentation: Here 3 level set contours are used which can segment u
 
 ### Example 2: 
 <div style="text-align: justify"> 
-Multi-phase, multi-channel segmentation: This is for images which have multiple channels like a RGB images which have 3 channels namely: red, green and blue. In this example, a RGB image, which has 3 colors is segmented using 2 level set contours (which can segment up to 4 regions). The video shows the evolution of the level set contours for segmenting the image.
+Multi-phase, multi-channel segmentation: This is for images which have multiple channels like RGB images which have 3 channels namely: red, green and blue. In this example, a RGB image, which has 3 colors is segmented using 2 level set contours (which can segment up to 4 regions). The video shows the evolution of the level set contours for segmenting the image.
 </div>
 <br/>
 <p align="center">
